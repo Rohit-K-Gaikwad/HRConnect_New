@@ -17,9 +17,8 @@ from my_utils.csvfile import HandleCSV
 
 def get_details() -> List:
 
-    reader = 10
-    # reader = HandleCSV.read_entire_csv()
 
+    # reader = HandleCSV.read_entire_csv()
 
     getdata = []
     for data in reader:
