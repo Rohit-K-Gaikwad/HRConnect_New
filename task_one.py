@@ -8,15 +8,11 @@ Write a program to get details of employees who's salary is > 9000.
 """
 
 
-from pprint import pprint
 from typing import List
 
 from my_utils.csvfile import HandleCSV
 
-
-
-def get_details() -> List:
-
+def do_task_one() -> List:
 
     reader = HandleCSV.read_entire_csv()
 
@@ -31,6 +27,4 @@ def get_details() -> List:
 
 
 if __name__ == "__main__":
-
-    pprint(get_details())
-    #comment
+    print(do_task_one())
