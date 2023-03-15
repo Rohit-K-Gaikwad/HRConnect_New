@@ -7,23 +7,22 @@ Write a program to get details of employees who's salary is > 9000.
 
 """
 
-
 from typing import List
 
 from my_utils.csvfile import HandleCSV
 
+
 def do_task_one() -> List:
-
     reader = HandleCSV.read_entire_csv()
+    emp_data = {}
+    j = 1
+    for i in reader:
+        if int(i["SALARY"]) > 9000:
+            emp_data[j] = {"Name": (i["FIRST_NAME"] + " " + i["LAST_NAME"]),
+                      "email": i["EMAIL"], "Phone": i["PHONE_NUMBER"].replace(".", "")}
+            j += 1
+    return emp_data
 
-    getdata = []
-    for data in reader:
-        if int(data.get("SALARY")) > 9000:
-            getdata.append({"Name": data.get('FIRST_NAME') + " " + data.get('LAST_NAME'), "Email": data.get('EMAIL'),
-                            "Phone Number": (data.get("PHONE_NUMBER").replace(".", ""))})
-    return getdata
-    # for finaldata in getdata:
-    #     return (finaldata)
 
 
 if __name__ == "__main__":
