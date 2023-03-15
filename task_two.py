@@ -9,7 +9,7 @@ to 110 AND who's salary is > 4200.
 """
 
 from typing import Dict
-from pprint import pprint
+
 
 from my_utils.csvfile import HandleCSV
 from my_utils.date_converter import convert_date
@@ -28,4 +28,6 @@ def do_task_two() -> Dict:
 
 
 if __name__ == "__main__":
-    pprint(do_task_two())
+    print(do_task_two())
+
+
